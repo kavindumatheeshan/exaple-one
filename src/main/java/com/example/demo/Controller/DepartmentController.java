@@ -1,7 +1,7 @@
-package Controller;
+package com.example.demo.Controller;
 
-import Repositories.DepartmentRepository;
-import Repositories.EmployeeRepository;
+import com.example.demo.Repositories.DepartmentRepository;
+import com.example.demo.Repositories.EmployeeRepository;
 import com.example.demo.Department;
 import com.example.demo.Employee;
 import org.springframework.web.bind.annotation.*;

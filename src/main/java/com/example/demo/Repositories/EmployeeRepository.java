@@ -1,4 +1,4 @@
-package Repositories;
+package com.example.demo.Repositories;
 
 import com.example.demo.Employee;
 import org.springframework.stereotype.Repository;

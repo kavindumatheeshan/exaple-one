@@ -4,22 +4,20 @@ public class Department {
     private Long id;
     private String name;
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
-    public Long getid()
-    {
+
+    public Long getid() {
         return id;
     }
 
-    public void setid(long id)
-    {
-        this.id=id;
+    public void setid(long id) {
+        this.id = id;
     }
-    public void setname(String name)
-    {
-        this.name=name;
+
+    public void setname(String name) {
+        this.name = name;
     }
 
 }

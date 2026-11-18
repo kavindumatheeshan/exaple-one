@@ -1,7 +1,7 @@
-package Controller;
+package com.example.demo.Controller;
 
-import Repositories.DepartmentRepository;
-import Repositories.EmployeeRepository;
+import com.example.demo.Repositories.DepartmentRepository;
+import com.example.demo.Repositories.EmployeeRepository;
 import com.example.demo.Department;
 import com.example.demo.Employee;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +21,7 @@ public class EmployeeControler {
         this.depReo=depReo;
     }
 
-    @PostMapping("/department/{depId}")
+    @PostMapping("/department/{depid}")
     public Employee create(@PathVariable long depid, @RequestBody Employee employee)
     {
         Department dept =depReo.findById(depid).orElseThrow(()-> new RuntimeException("Department not found "));
@@ -34,7 +34,7 @@ public class EmployeeControler {
         return empReo.findAll();
     }
 
-    @GetMapping("/{id}")
+    @PutMapping("/{id}")
     public Employee update(@PathVariable long id,@RequestBody Employee details)
     {
         Employee emp=empReo.findById(id).orElseThrow(()-> new RuntimeException("employee not found "));
@@ -43,7 +43,7 @@ public class EmployeeControler {
         emp.setTel(details.getTel());
         return empReo.save(emp);
     }
-    @DeleteMapping("{/id}")
+    @DeleteMapping("/{id}")
     public String delete(@PathVariable Long id ){
         empReo.deleteById(id);
         return "Deleted employee id:"+id;
